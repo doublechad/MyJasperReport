@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="318156be-91f1-4a58-9336-248f1837b044">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="251"/>
+	<style name="chiess" fontName="標楷體" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H"/>
+	<subDataset name="dataset1" uuid="7b0fd01f-0588-4491-b005-07c421a4ca4a"/>
+	<field name="uuid" class="java.lang.String"/>
+	<field name="landlord" class="java.lang.String"/>
+	<field name="tenant" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="deposit" class="java.lang.String"/>
+	<field name="leaseprice" class="java.lang.String"/>
+	<field name="payment" class="java.lang.String"/>
+	<field name="arrivaldate" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="169" y="0" width="217" height="62" uuid="73e0a50f-9391-44a4-a343-a80abee66e2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="標楷體" size="18" isBold="true" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[愛豬網租屋契約]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="5fb01236-c6d2-4363-8534-eefe3c40c937"/>
+				<textElement>
+					<font fontName="標楷體" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[契約編號]]></text>
+			</staticText>
+			<line>
+				<reportElement x="44" y="19" width="78" height="1" uuid="e8f29e62-f1ae-4308-abf7-add2f8e22de8"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="44" y="0" width="78" height="20" uuid="1b841f43-54fb-40e7-9c43-5578b98c07dc"/>
+				<textElement>
+					<font fontName="標楷體" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uuid}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="57" splitType="Stretch">
+			<staticText>
+				<reportElement x="93" y="12" width="100" height="33" uuid="8fc0e986-959a-4f04-ae17-01505a2cd222"/>
+				<textElement>
+					<font fontName="標楷體" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[甲方:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="12" width="112" height="33" uuid="d93f9671-1528-43ff-a8f3-050edef9d6d3"/>
+				<textElement>
+					<font fontName="標楷體" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[乙方:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="122" y="33" width="71" height="1" uuid="aa858d2b-73b2-4ccd-ade1-4e5a119fbfe3"/>
+			</line>
+			<line>
+				<reportElement x="388" y="34" width="74" height="1" uuid="ce83e8d9-98b7-4bc8-a741-920c2b0f4b00"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="388" y="14" width="86" height="20" uuid="9e2aa46e-ede3-47ce-8cbf-e9f0707f55ac"/>
+				<textElement>
+					<font fontName="標楷體" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tenant}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="122" y="13" width="100" height="20" uuid="f1f574b6-9b25-48aa-95b7-3d8f35d98ce0"/>
+				<textElement>
+					<font fontName="標楷體" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{landlord}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement style="chiess" x="93" y="40" width="100" height="20" uuid="1a1ffe28-1452-419a-b0cc-b01a0a9e649c"/>
+				<textElement>
+					<font fontName="標楷體" pdfEncoding="UniCNS-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[租約到期日:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="chiess" x="93" y="20" width="100" height="20" uuid="01c29e61-7c88-40ea-9408-e861af36e48c"/>
+				<textElement>
+					<font fontName="標楷體" pdfEncoding="UniCNS-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[押金:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="chiess" x="93" y="60" width="100" height="20" uuid="7c681174-3e77-48d7-ab45-8e31b6888342"/>
+				<textElement>
+					<font fontName="標楷體" pdfEncoding="UniCNS-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[租金:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="chiess" x="93" y="80" width="100" height="20" uuid="41120741-fc81-42f2-b4f8-b0ba11714e91"/>
+				<textElement>
+					<font fontName="標楷體" pdfEncoding="UniCNS-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[付款方式:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="0" width="100" height="20" uuid="45b14e27-ed37-48ed-9bf4-9516d53f2ea5"/>
+				<textElement>
+					<font fontName="標楷體" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[地址:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="chiess" x="122" y="0" width="369" height="20" uuid="9ce3b2f1-e953-47d1-a466-5f2b09e6267c"/>
+				<textElement>
+					<font fontName="標楷體" pdfFontName="MHei-Medium" pdfEncoding="UniCNS-UCS2-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="chiess" x="122" y="20" width="369" height="20" uuid="c3b2c9f7-9c8e-49f3-a178-6f46c4e3da86"/>
+				<textElement>
+					<font fontName="標楷體"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deposit}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="chiess" x="147" y="40" width="344" height="20" uuid="f114f2c3-0a40-4974-a24d-cd408f31e9b8"/>
+				<textElement>
+					<font fontName="標楷體"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{arrivaldate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="chiess" x="122" y="60" width="369" height="20" uuid="746aef2a-3e71-4c42-be4d-8401d97f0119"/>
+				<textElement>
+					<font fontName="標楷體"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{leaseprice}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="chiess" x="137" y="80" width="354" height="20" uuid="adfb1aa6-7ccd-4fd3-961c-2a28fd624e98"/>
+				<textElement>
+					<font fontName="標楷體"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{payment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement style="chiess" x="93" y="0" width="100" height="20" uuid="d438dd06-4f58-4ee1-93e8-7aa0d8702dfc"/>
+				<textElement>
+					<font fontName="標楷體" pdfEncoding="UniCNS-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[甲方簽名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="chiess" x="362" y="0" width="100" height="20" uuid="0ee861df-a136-48d2-9b41-d18eed1963f3"/>
+				<textElement>
+					<font fontName="標楷體" pdfEncoding="UniCNS-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[乙方簽名]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement style="chiess" x="362" y="34" width="100" height="20" uuid="800ef13f-57a5-444c-8ce0-32dd40806a85"/>
+				<textElement>
+					<font fontName="標楷體" pdfEncoding="UniCNS-UCS2-H"/>
+				</textElement>
+				<text><![CDATA[日期]]></text>
+			</staticText>
+			<textField pattern="yyyy/MM/dd" isBlankWhenNull="true">
+				<reportElement x="388" y="34" width="100" height="20" uuid="3cdd3707-f08e-4318-bde9-91f963c14c04"/>
+				<textFieldExpression><![CDATA[java.util.Calendar.getInstance().getTime()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
